@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>ChatBot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link href='https://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'> -->
+  <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+  <link href="{{url_for('static',filename = 'assets/css/style.css')}}" rel="stylesheet" />
+  <script
+			  src="https://code.jquery.com/jquery-3.2.1.js"
+			  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+			  crossorigin="anonymous">
+		</script>
+
+
+</head>
+<body>
+  <main class="page__main">
+    <div class="block--background">
+      <div class="chatbot__overview">
+        <ul class="chatlist">
+          <li class="bot__output bot__output--standard">Hello, WELCOME TO KHAN FAMILY!</li>
+          <li class="bot__output bot__output--standard">I will help you in finding relations in Khan Family </li>  
+          <li class="bot__output bot__output--standard">    
+            <span class="bot__output--second-sentence">Please Select Any Number Below In Order To Find Relationship!</span>
+            <ul>
+              <li class="input__nested-list">Enter <span class="bot__command">1</span> For baap</li>
+              <li class="input__nested-list">Enter <span class="bot__command">2</span> For maa</li>
+              <li class="input__nested-list">Enter <span class="bot__command">3</span> For beti</li>
+              <li class="input__nested-list">Enter <span class="bot__command">4</span> For beta</li>
+              <li class="input__nested-list">Enter <span class="bot__command">5</span> For dada</li>
+              <li class="input__nested-list">Enter <span class="bot__command">6</span> For nana</li>
+              <li class="input__nested-list">Enter <span class="bot__command">7</span> For dadi</li>
+              <li class="input__nested-list">Enter <span class="bot__command">8</span> For nani</li>
+              <li class="input__nested-list">Enter <span class="bot__command">9</span> For sala</li>
+              <li class="input__nested-list">Enter <span class="bot__command">a</span> For bahu</li>
+              <li class="input__nested-list">Enter <span class="bot__command">b</span> For pota</li>
+              <li class="input__nested-list">Enter <span class="bot__command">c</span> For poti</li>
+              <li class="input__nested-list">Enter <span class="bot__command">d</span> For nawasa</li>
+              <li class="input__nested-list">Enter <span class="bot__command">e</span> For nawasi</li>
+              <li class="input__nested-list">Enter <span class="bot__command">f</span> For male side sussar</li>
+              <li class="input__nested-list">Enter <span class="bot__command">g</span> For female side sussar</li>
+              <li class="input__nested-list">Enter <span class="bot__command">h</span> For bapdada</li>
+              <li class="input__nested-list">Enter <span class="bot__command">i</span> For khala</li>
+              <li class="input__nested-list">Enter <span class="bot__command">j</span> For chachataya</li>
+              <!-- <li class="input__nested-list">Mees' <span class="bot__command">best work</span></li> -->
+             <!-- <li class="input__nested-list">Maybe I could <span class="bot__command">help</span> (for more instructions)</li>
+              <li class="input__nested-list">Type <span class="bot__command">commands</span> for a list of every command</li> -->
+            </ul>
+          </li>
+        </ul>
+    
+        <ul class="chatlist">
+          <li class="bot__output bot__output--standard">Following Are The Members Of KHAN FAMILY!</li>
+          <!-- <li class="bot__output bot__output--standard">I will help you in finding relations in Khan Family </li>   -->
+          <li class="bot__output bot__output--standard">    
+            <!-- <span class="bot__output--second-sentence">Please Select Any Number Below In Order To Find Relationship!</span> -->
+            <ul>
+              <li class="input__nested-list">ChoteKhan <span class="bot__command">,</span> ChotiRani</li>
+              <li class="input__nested-list">BarreKhan <span class="bot__command">,</span> BarriRani</li>
+              <li class="input__nested-list">Salim <span class="bot__command">,</span> Kausar</li>
+              <li class="input__nested-list">Nadir <span class="bot__command">,</span> Asad</li>
+              <li class="input__nested-list">Nahid <span class="bot__command">,</span> Sumra</li>
+              <li class="input__nested-list">Rizwan <span class="bot__command">,</span> Burhan</li>
+              <li class="input__nested-list">Rashid <span class="bot__command">,</span> Akram</li>
+              <li class="input__nested-list">Salima <span class="bot__command">,</span> Sanam</li>
+              <li class="input__nested-list">Rabia <span class="bot__command"></span> </li>       
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+  
+
+      <div class="chatbox-area">
+        <form method="POST" action="{{url_for('index')}}" id="chatform">
+            <textarea onclick="sendUserInfo()" placeholder="Talk to me!" class="chatbox" name="chatbox" resize: "none" ></textarea>
+            
+            <input onclick="sendUserInfo()" name="value" class="submit-button" type="submit" value="send">
+         
+        </form>
+
+      </div> 
+
+			    <div class="block--background"></div>
+      
+
+</main>
+
+
+
+  <!-- <script  src="assets/js/script.js"></script> -->
+  <script type="text/javascript">
+    var names = '{{ name }}'
+  </script>
+  <script type="text/javascript" 
+  src="{{url_for('static',filename = 'assets/js/script.js')}}", name>
+  </script>
+  
+
+</body>
+</html>
